@@ -1,0 +1,231 @@
+.content-row {
+    background-color: $bgColor-1;
+}
+
+.content {
+    max-width: $default-width;
+    color: $brownColor;
+    @include center-block;
+    // @include see-border;
+    padding-top: 48px;
+}
+
+.cart-menu {
+    width: 25%;
+    // @include see-border;讓購物車做定位
+    float: left;
+    margin-top: 4px;
+    padding-left: 42px;
+    @include custom-one-size(832px) {
+        padding-left: 10px;
+    }
+    @include pad {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+        float: none;
+    }
+    // @include see-border;
+    .fa-pagelines {
+        @include mul-font(1.5);
+        margin-left: 10px;
+    }
+    h3 {
+        @include mul-font(1.25);
+        // 因為h3是block屬性，且沒有要使用float，所以要改display屬性
+        display: inline-block;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+    ul {
+        padding-right: 20px;
+        li {
+            a {
+                padding: 5px 10px;
+                line-height: 32px;
+                border-bottom: 1px solid $brownColor;
+                width: 100%;
+                display: block;
+                color: $brownColor;
+            }
+            a:hover {
+                background-color: $brownColor;
+                color: $whiteColor;
+            }
+        }
+    }
+}
+
+.cart-content {
+    width: 75%;
+    float: left;
+    // @include see-border;
+    // float: left;
+    @include pad {
+        width: 100%;
+        float: none;
+    }
+}
+
+.cart-search {
+    // @include see-border;
+    padding: 0 20px;
+    .pure-button {
+        background-color: $brownColor;
+        // 重設定button屬性  
+        width: 36px;
+        height: 32px;
+        border-radius: 0px;
+        padding: 0px;
+        margin-left: -6px;
+        float: left;
+        @include mobile {
+            margin: 0;
+        }
+    }
+}
+
+.pure-form {
+    width: 66%;
+    float: left;
+    @include pad {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+// 因為purecss有class權限必較高所以用id去rest css
+#search-box {
+    width: calc(100% - 42px);
+    min-height: 32px;
+    border-radius: 0;
+    float: left;
+    @include pad {
+        float: left;
+    }
+}
+
+.pay-shop {
+    float: right;
+    margin-top: 6px;
+    margin-right: 63px;
+    // 為了讓購買數量能夠定位
+    position: relative;
+    @include pad {
+        margin-right: 20px;
+    }
+}
+
+#shopping-cart-img {
+    float: left;
+    padding-left: 17px;
+    margin-top: -5px;
+    font-size: 25px;
+}
+
+.go-pay {
+    padding: 0 10px;
+    border-right: 1px solid $brownColor;
+    float: left;
+    color: $brownColor;
+}
+
+.cart-list {
+    li {
+        width: calc(33.33333% - 20px);
+        float: left;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+        margin-right: 20px;
+        margin-top: 26px;
+        margin-bottom: 26px;
+        @include pad {
+            width: calc(50% - 20px);
+            margin: 26px 10px;
+        }
+        @include mobile {
+            width: calc(100% - 20px);
+        }
+        a {}
+    }
+}
+
+.cart-list-img {
+    min-height: 120px;
+    background-position: center top;
+    // 圖片符合div大小
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mobile {
+        background-position: 80% 80%;
+    }
+}
+
+.cart-list-content {
+    text-align: center;
+    h3 {
+        @include mul-font(1.25);
+        margin-top: 11px;
+    }
+}
+
+.cart-list-content-e {
+    @include mul-font(0.75);
+}
+
+// 有寫共用基本的css
+.hr-style1 {
+    width: 30%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.money {
+    @include mul-font(1.25);
+}
+
+.cart-list-add {
+    @include center-block;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+
+#fa-shopping-cart {
+    margin-right: 9px;
+}
+
+.button-warning {
+    width: 90%;
+}
+
+#cart-list-img1 {
+    background-image: url("../img/product_1.png");
+}
+
+#cart-list-img2 {
+    background-image: url("../img/product_2.png");
+}
+
+#cart-list-img3 {
+    background-image: url("../img/product_3.png");
+}
+
+#cart-list-img4 {
+    background-image: url("../img/product_4.png");
+}
+
+.circle {
+    width: $font-l;
+    height: $font-l;
+    border-radius: 100%;
+    background-color: $orangeColor;
+    text-align: center;
+    color: $whiteColor;
+    font-size: $font-s;
+    line-height: 17px;
+    border: 1px solid $whiteColor;
+    z-index: 5;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+}

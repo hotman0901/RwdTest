@@ -1,0 +1,411 @@
+.content-row {
+    background-color: $bgColor-1;
+}
+
+.content {
+    text-align: center;
+    max-width: $default-width;
+    @include center-block;
+    text-align: center;
+    // position: relative;
+}
+
+// .content-w-center {
+//      max-width: 452px;
+//      margin: 0 auto;
+// }
+.content-h2 {
+    // float: left;
+    max-width: 300px;
+    padding-top: 50px;
+    display: inline-block;
+    // @include center-block;
+    h2 {
+        @include mul-font(1.25);
+        color: $brownColor;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+}
+
+// 有寫共用基本的css
+.hr-style1 {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    background: $lineColor;
+    @include mobile {
+        display: none;
+    }
+}
+
+.thin-border {
+    float: left;
+    max-width: 109px;
+    height: 1px;
+    background-color: $lineColor;
+    top: 10px;
+    margin-top: 82px;
+}
+
+.thin-border-l {
+    margin-right: 12px;
+}
+
+.thin-border-r {
+    margin-left: 11px;
+}
+
+.avator-main {
+    max-width: $default-width;
+    line-height: 20px;
+    @include center-block;
+    padding-bottom: 50px;
+    padding-left: 10px;
+}
+
+.avator-content {
+    li {
+        max-width: calc(100% / 3 - 60px);
+        margin: 31px 30px 20px 30px;
+        float: left;
+        @include pad {
+            max-width: calc(100% / 3 - 20px);
+            margin: 31px 10px 20px 10px;
+        }
+        @include iphone6 {
+            max-width: 100%;
+            margin: 31px 0px 20px 0px;
+        }
+        img {
+            @include center-block;
+            width: 200px;
+            //必須用成block才可以使用centerblock
+            display: block;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        h3 {
+            text-align: center;
+            font-size: $font-l;
+            color: $brownColor;
+        }
+        p {
+            margin-top: 11px;
+            font-size: $font-m;
+            color: $brownColor;
+            @include iphone6 {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+.introduction-row {
+    background-color: $brownColor;
+}
+
+.introduction {
+    max-width: $default-width;
+    @include center-block;
+    // img {
+    //     padding-left: 42px;
+    //     float: left;
+    //     width: 48%;
+    // }
+}
+
+.introduction-content-img {
+    overflow: hidden;
+    height: 460px;
+    max-width: 48%;
+    float: left;
+    margin-left: 20px;
+    @include custom-one-size(700px) {
+        margin-left: 10px;
+    }
+    @include iphone6 {
+        display: block;
+        float: none;
+        max-width: 100%;
+        overflow: initial;
+        margin: 0;
+        height: auto;
+    }
+    img {
+        // 寬高要寫死才不會被壓縮
+        height: 460px;
+        max-width: 470px;
+        float: left;
+        // 在pad下讓圖片往左偏移
+        @include pad {
+            position: relative;
+            left: -90px;
+        }
+        @include iphone6 {
+            left: 0;
+            width: 100%;
+            height: auto;
+            float: none;
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+
+.introduction-content {
+    padding-left: 25px;
+    float: left;
+    color: $bgColor-1;
+    max-width: 46%;
+    @include custom-one-size(700px) {
+        max-width: 49%;
+        padding-left: 10px;
+    }
+    @include iphone6 {
+        max-width: 100%;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 30px;
+    }
+    h3 {
+        @include mul-font(1.25);
+        margin-top: 81px;
+        line-height: 32px;
+        @include desktop-top {
+            margin-top: 30px;
+        }
+        @include custom-one-size(700px) {
+            margin-top: 15px;
+        }
+    }
+    h4 {
+        font-size: $font-m;
+        line-height: 21px;
+    }
+    p {
+        margin-top: 16px;
+        font-size: $font-m;
+        display: inline-block;
+        line-height: 22px;
+        padding-right: 77px;
+        @include desktop-top {
+            padding-right: 10px;
+        }
+        @include custom-one-size(700px) {
+            padding-right: 0;
+        }
+    }
+}
+
+.opinion-row {
+    background-color: $bgColor-1;
+}
+
+.listen {
+    text-align: center;
+    @include mul-font(1.5);
+    padding-top: 50px;
+    background-color: $bgColor-1;
+    color: $brownColor;
+}
+
+.opinion {
+    // height: 100px;
+    // border: 1px solid black;
+    max-width: $default-width;
+    @include center-block;
+    color: $brownColor;
+    height: auto;
+    padding: 32px 42px 50px 42px;
+    @include pad {
+        padding: 32px 25px 50px 25px;
+    }
+    @include iphone6 {
+        padding: 32px 20px 50px 20px;
+    }
+    ul {
+        text-align: center;
+        li {
+            // border: 1px solid black;
+            width: 33.33333%;
+            float: left;
+            @include iphone6 {
+                width: 100%;
+                margin-bottom: 20px;
+                float: none;
+                display: block;
+            }
+            img {
+                float: left;
+                // border: 1px solid black; 
+                width: 67px;
+                height: 67px;
+            }
+        }
+    }
+}
+
+.opinion-title {
+    float: left;
+    // 100%是抓父層寬、所以是指li的寬度
+    // 再減去頭像寬度
+    width: calc(100% - 69px);
+    // border: 1px solid black;
+    padding-left: 13px;
+    padding-right: 2px;
+    h4 {
+        padding-top: 19px;
+        padding-bottom: 22px;
+        font-size: $font-l;
+        text-align: left;
+        max-width: 90px;
+        // border: 1px solid black;
+        // display: inline-block;
+    }
+    p {
+        display: inline-block;
+        text-align: left;
+        line-height: 23px;
+        padding-bottom: 16px;
+    }
+    span {
+        text-align: right;
+        display: block;
+    }
+}
+
+.location-title {
+    text-align: center;
+    @include mul-font(1.5);
+    padding-top: 50px;
+    background-color: $bgColor-3;
+    color: $brownColor;
+    line-height: 33px;
+    padding-bottom: 38px
+}
+
+.location-row {
+    background-color: $bgColor-3;
+}
+
+.location {
+    max-width: $default-width;
+    @include center-block;
+    padding-bottom: 50px;
+    // img {
+    //     float: left;
+    //     width: 44%;
+    //     padding-left: 42px;
+    // }
+    form {
+        width: calc(50% - 40px);
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        @include iphone6 {
+            // display: blcok;
+            // float: none;
+            margin: 0 20px 0 20px;
+            width: calc(100% - 40px);
+        }
+        label {
+            font-size: $font-s;
+            margin-bottom: 6px;
+            // label需要加上inline-block屬性才可以
+            display: inline-block;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            @include iphone6 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.location-content-img {
+    overflow: hidden;
+    height: 388px;
+    max-width: calc(48% - 20px);
+    float: left;
+    margin-left: 20px;
+    // @include custom-one-size(700px) {
+    //     margin-left: 10px;
+    // }
+    @include iphone6 {
+        display: block;
+        float: none;
+        max-width: 100%;
+        overflow: initial;
+        margin: 0 10px;
+        height: auto;
+    }
+    img {
+        // 寬高要寫死才不會被壓縮
+        height: 388px;
+        max-width: 470px;
+        // float: left;
+        // 在pad下讓圖片往左偏移
+        // @include pad {
+        //     position: relative;
+        //     left: -90px;
+        // }
+        @include iphone6 {
+            left: 0;
+            width: 100%;
+            height: auto;
+            float: none;
+            margin: 0 auto 30px auto;
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+
+
+/*******************/
+
+.button-warning {
+    margin-left: 11px;
+}
+
+#name_ {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    font-size: $font-m;
+    margin-bottom: 12px;
+}
+
+#tel {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    font-size: $font-m;
+    margin-bottom: 12px;
+}
+
+#mail {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    font-size: $font-m;
+    margin-bottom: 12px;
+}
+
+#people {
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    font-size: $font-m;
+    margin-bottom: 12px;
+}
+
+#form-button {
+    margin-top: 30px;
+    text-align: right;
+}

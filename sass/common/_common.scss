@@ -1,0 +1,288 @@
+* {
+    font-family: "MicrosoftJhengHeiRegular";
+}
+
+
+/* header-start*/
+
+.header-row {
+    background-color: $blackColor;
+}
+
+.header {
+    // 個別設定每個地方的高度(header用)
+    height: $header-height;
+    max-width: $default-width;
+    @include center-block;
+}
+
+.logo {
+    padding-top: 16px;
+    padding-left: 42px;
+    float: left;
+    @include pad {
+        padding-left: 15px;
+    }
+    h1 {
+        a {
+            @include hide-text;
+            background: url('../img/logo_w.svg') no-repeat;
+            // 需要有基本的長寬才可以顯示出圖片
+            width: 120px;
+            height: 24px;
+            float: left;
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 14px;
+    margin-right: 10px;
+    @include pad() {
+        display: inline-block;
+    }
+    &:hover {
+        background-color: $whiteColor;
+        span {
+            background-color: $blackColor;
+        }
+    }
+}
+
+.icon-bar {
+    background-color: $whiteColor;
+    display: block;
+    height: 4px;
+    margin: 0 auto 4px;
+    width: 30px;
+}
+
+.menu {
+    float: right;
+    // 小於768就影藏選單
+    @include pad() {
+        //隱藏選單開始
+        max-height: 0px;
+        overflow: hidden;
+        //隱藏選單結束
+        transition: 2.1s;
+        margin-top: 1px;
+        //絕對定位疊在網頁上
+        position: absolute;
+        z-index: 10000;
+        // 下移到menu下方
+        top: 55px;
+        left: 0;
+        right: 0;
+        background: $blackColor;
+    }
+    li {
+        float: left;
+        @include pad() {
+            float: none;
+            border-bottom: 1px dashed $bgColor-1;
+        }
+        a {
+            color: $whiteColor;
+            // 用padding把可以滑動的區塊增加
+            padding: 18px 15px 15px 15px;
+            font-size: $font-m;
+            display: block;
+            &:hover {
+                border-bottom: 4px solid white;
+            }
+        }
+    }
+}
+
+// jquery 在body增加css時show出下拉選單
+.show-menu {
+    .menu {
+        max-height: 200px;
+    }
+}
+
+
+/* header-end*/
+
+
+/* banner-start*/
+
+.banner-row {
+    background-color: $bgColor-2;
+}
+
+.banner {
+    // @@@@@@@@@@@@@@@
+    // 為什麼使用relative就會使漢堡選單被蓋住
+    // position: relative;
+    background-image: url("../img/header_desktop.png");
+    background-repeat: no-repeat;
+    background-position: 80% 80%;
+    height: $banner-height;
+    max-width: $default-width;
+    @include center-block;
+}
+
+.slogn {
+    background: rgba(0, 0, 0, 0.35);
+    width: 460px;
+    top: 67px;
+    margin: 0 auto;
+    // 加上relative下拉選單觸發時會無法遮住banner
+    position: relative;
+    @include mobile {
+        width: 85%;
+    }
+}
+
+// 特定字摺行做法
+.wrap-title:after {
+    @include mobile {
+        @include wrap-text;
+    }
+}
+
+.slogn-title {
+    @include mul-font(2);
+    // position: relative;
+    padding-top: 20px;
+    line-height: 48px;
+    color: $whiteColor;
+    text-align: center;
+}
+
+.slogn-content {
+    // position: relative;
+    padding-top: 16px;
+    line-height: 25px;
+    color: $whiteColor;
+    text-align: center;
+    padding-bottom: 26px;
+}
+
+
+/* banner-end*/
+
+
+/* footer-start*/
+
+.footer-row {
+    background-color: $bgColor-1;
+}
+
+.footer {
+    max-width: $default-width;
+    // padding-bottom: 40px;
+    // padding-top: 50px;
+    color: $brownColor;
+    @include center-block;
+    // padding-left: 42px;
+    // padding-right: 42px;
+    padding: 40px 42px 50px 42px;
+    @include custom-one-size(800px) {
+        padding: 40px 10px 50px 10px;
+    }
+}
+
+.about-hex {
+    width: 33.33333%;
+    float: left;
+    // padding-left: 42px;
+    margin-right: 42px;
+    @include custom-one-size(800px) {
+        margin-right: 20px;
+    }
+    @include iphone6 {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    h3 {
+        @include mul-font(1.5);
+        padding-bottom: 16px;
+    }
+    p {
+        font-size: $font-m;
+        line-height: 21px;
+    }
+}
+
+.contact {
+    float: left;
+    width: 25%;
+    @include iphone6 {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+    h3 {
+        @include mul-font(1.5);
+        padding-bottom: 16px;
+    }
+    ul {
+        padding-left: 20px;
+        li {
+            font-size: $font-m;
+            line-height: 21px;
+            list-style-type: disc;
+        }
+    }
+}
+
+.hex-shop {
+    width: 33.33333%;
+    float: right;
+    text-align: right;
+    // padding-right: 42px;
+    @include iphone6 {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+.social-icon {
+    font-size: 36px;
+    margin-top: 22px;
+}
+
+.google-icon {
+    color: $google-color;
+}
+
+.twitter-icon {
+    color: $twitter-color;
+}
+
+.facebook-icon {
+    color: $facebook-color;
+}
+
+
+/* footer-end*/
+
+.clearfix {
+    @include clearfix;
+}
+
+.hr-style1 {
+    border: 0;
+    height: 1px;
+    background: $brownColor;
+    width: 15%;
+}
+
+.gototp-img{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+}

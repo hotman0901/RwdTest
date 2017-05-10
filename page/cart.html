@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="RWD網站">
+    <meta name="keyword" content="RWD網站">
+    <meta http-equiv="X-UA-Compatiable" content="IE-Edge">
+    <!-- facebook設定-->
+    <meta property="og:title" content="RWD網站">
+    <meta property="og:description" content="RWD網站">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tw.yahoo.com/">
+    <meta property="og:image" content="../img/logo.png">
+    <!-- hader banner footer 共用的css(因為每個html都是一樣的) -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <!-- index 其他的css -->
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="shoirtcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/pure/forms.css">
+    <link rel="stylesheet" type="text/css" href="../css/pure/buttons.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/common.js"></script>
+    <title>RWD網站</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header-row">
+            <div class="header animated fadeIn">
+                <div class="logo">
+                    <h1>
+            			<a href="../index.html">六角西餐廳</a>
+            		</h1>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#">特色</a>
+                    </li>
+                    <li>
+                        <a href="cart.html">訂購</a>
+                    </li>
+                    <li>
+                        <a href="../page/login.html">登入</a>
+                    </li>
+                </ul>
+                <button class="hamburger-menu" id="hamburger" style="float: right;">
+                    <span class="icon-bar" style="margin-top: 3px;"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="banner-row">
+            <div class="banner">
+                <div class="slogn animated rubberBand">
+                    <h2 class="slogn-title"><span class="wrap-title">咬一口</span>就無法忘懷的漢堡</h2>
+                    <br>
+                    <p class="slogn-content">七夕絕對無法錯過的好滋味
+                        <br>
+                        <i class="fa fa-cutlery" aria-hidden="true"></i> 六角漢堡
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                    </p>
+                </div>
+                <!-- <img src="img/header_desktop.png" alt="bannr"> -->
+            </div>
+        </div>
+        <div class="content-row">
+            <div class="content">
+                <!-- 左側－選單 -->
+                <div class="cart-menu">
+                    <!-- 如果可以之後做成位移左側出去影藏住點到再進來 -->
+                    <i class="fa fa-pagelines" aria-hidden="true"></i>
+                    <h3>線上訂購美食</h3>
+                    <ul>
+                        <li><a href="">全部(23)</a></li>
+                        <li><a href="">只愛吃薯條(18)</a></li>
+                        <li><a href="">加熱就可食(1)</a></li>
+                        <li><a href="">不敗漢堡系列(4)</a></li>
+                    </ul>
+                </div>
+                <!-- 右側－購物 -->
+                <div class="cart-content">
+                    <!-- 搜尋列 -->
+                    <div class="cart-search">
+                        <form class="pure-form">
+                            <input id="search-box" class="search-box" type="text" placeholder="輸入關鍵字" required>
+                            <button type="submit" class="pure-button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        <div class="pay-shop">
+                            <a href="#" class="go-pay">結帳去</a>
+                            <a href="" style="color: #3d1101">
+                                <i class="fa fa-shopping-cart" aria-hidden="true" id="shopping-cart-img"></i>
+                                <div class="clearfix"></div>
+                            </a>
+                            <div class="circle" style="cursor: pointer;">1</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- 商品清單 -->
+                    <div class="cart-list">
+                        <ul>
+                            <li>
+                                <div id="cart-list-body">
+                                    <div id="cart-list-img1" class="cart-list-img">
+                                    </div>
+                                    <div class="cart-list-content">
+                                        <h3>經典漢堡套餐</h3>
+                                        <span class="cart-list-content-e">Classic Hamburger Package</span>
+                                        <hr class="hr-style1">
+                                        <span class="money">$120</span>
+                                    </div>
+                                    <div class="cart-list-add">
+                                        <button class="button-warning pure-button">
+                                            <i class="fa fa-shopping-cart" id="fa-shopping-cart"></i>加入購物車
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="cart-list-body">
+                                    <div id="cart-list-img2" class="cart-list-img">
+                                    </div>
+                                    <div class="cart-list-content">
+                                        <h3>英俊香腸</h3>
+                                        <span class="cart-list-content-e">Handsome Sausage</span>
+                                        <hr class="hr-style1">
+                                        <span class="money">$1,024</span>
+                                    </div>
+                                    <div class="cart-list-add">
+                                        <button class="button-warning pure-button">
+                                            <i class="fa fa-shopping-cart" id="fa-shopping-cart"></i>加入購物車
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="cart-list-body">
+                                    <div id="cart-list-img3" class="cart-list-img">
+                                    </div>
+                                    <div class="cart-list-content">
+                                        <h3>漢堡兄弟</h3>
+                                        <span class="cart-list-content-e">Hamburg Brothers</span>
+                                        <hr class="hr-style1">
+                                        <span class="money">$792</span>
+                                    </div>
+                                    <div class="cart-list-add">
+                                        <button class="button-warning pure-button">
+                                            <i class="fa fa-shopping-cart" id="fa-shopping-cart"></i>加入購物車
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="cart-list-body">
+                                    <div id="cart-list-img4" class="cart-list-img">
+                                    </div>
+                                    <div class="cart-list-content">
+                                        <h3>完美願望</h3>
+                                        <span class="cart-list-content-e">Dragon Ball Package</span>
+                                        <hr class="hr-style1">
+                                        <span class="money">$999,999</span>
+                                    </div>
+                                    <div class="cart-list-add">
+                                        <button class="button-warning pure-button">
+                                            <i class="fa fa-shopping-cart" id="fa-shopping-cart"></i>加入購物車
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer-row">
+            <div class="footer">
+                <div class="about-hex">
+                    <h3>關於 六角西餐廳</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea reprehenderit, velit odit totam inventore placeat cupiditate in. Dicta, ut, tempora.
+                    </p>
+                </div>
+                <div class="contact">
+                    <h3>聯絡方式</h3>
+                    <ul>
+                        <li>高雄市中正五路到底</li>
+                        <li>+886 886 886</li>
+                        <li>service@hexschool.com</li>
+                    </ul>
+                </div>
+                <div class="hex-shop">
+                    <img src="../img/logo_l.svg" alt="六角西餐廳" width="245px" height="48px">
+                    <!-- 使用div包住讓他為block狀態才可以把icon擺在下面 -->
+                    <div class="social-icon">
+                        <i class="fa fa-google-plus-square google-icon"></i>
+                        <i class="fa fa-twitter-square twitter-icon"></i>
+                        <i class="fa fa-facebook-square facebook-icon"></i>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- gototp -->
+    <div class="gototp">
+        <a href="#">
+            <img src="../img/goTop.png" class="gototp-img">
+        </a>
+    </div>
+</body>
+
+</html>
